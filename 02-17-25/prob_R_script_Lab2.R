@@ -13,13 +13,13 @@
 ### From the website: 
 ### http://archive.ics.uci.edu/ml/datasets/Car+Evaluation
 
-car<-read.table("car.txt")
+car<-read.table("02-17-25/car.txt")
 ?read.table
 car
 summary(car)
 head(car)
 
-car<-read.table("car.txt", sep=",")
+car<-read.table("02-17-25/car.txt", sep=",")
 summary(car)
 colnames(car)
 colnames(car)<-c("buying", "maint","doors", "persons", "lug_boot", "safety", "class")

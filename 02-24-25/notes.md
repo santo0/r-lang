@@ -12,3 +12,5 @@ distribution density plot to compare different groups
 a distribution is skewed to the right if it has outliers in the right part
 
 central limit theorem, as you increase sample size, the distribution becomes more symmetrical
+
+conditioanl prob is interesting beause you get to know about potential relations between the data
