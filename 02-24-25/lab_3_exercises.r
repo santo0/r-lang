@@ -37,17 +37,34 @@ for (i in 1:2){
 lam <- 4
 n <- 100
 
-n*dpois(0, lam) # number of days without accidents
+ceiling(n*dpois(0, lam)) # number of days without accidents
 
 pp <- numeric() # vector for storing probabilities
 for (i in 1:2){
   pp[i] <- dpois(i-1, lam)
 }
-n*(1-sum(pp)) # num of days with at least two accidents
+ceiling(n*(1-sum(pp))) # num of days with at least two accidents
+ceiling((1-ppois(1,lam))*n)
 
 pp <- numeric() # vector for storing probabilities
 for (i in 1:4){
   pp[i] <- dpois(i-1, lam)
 }
 n*sum(pp) # num of days with at most 3 accidents
+ceiling(ppois(3,lam)*n)
 
+# Question 4
+fans<-rexp(10000, 0.0003)
+plot(density(fans))
+nfans <- rexp(10000, 0.00035)
+lines(density(nfans),col=2)
+
+l<-0.0003
+1-pexp(10000,l)
+1-pexp(10000,0.00035)
+
+# Question 5
+r <-1/8
+pexp(5,r)
+qexp(1-0.95,r) # minutes
+qexp(1-0.95,r)*60 # seconds
